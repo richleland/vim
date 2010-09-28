@@ -19,7 +19,20 @@ set expandtab
 set backupdir=~/.vim/tmp/backup//
 set directory=~/.vim/tmp/swap//
 set backup                        
+set undofile
 
+" use hjkl
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+nnoremap j gj
+nnoremap k gk
+ 
 " misc. configs
 set number
 set encoding=utf-8
@@ -61,6 +74,13 @@ set gdefault
 map <leader><space> :noh<cr>
 nmap <tab> %
 vmap <tab> %
+
+" window helpers
+nnoremap <leader>w <C-w>v<C-w>l
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 " remove trailing whitespace
 autocmd BufWritePre *.py :%s/\s\+$//e
