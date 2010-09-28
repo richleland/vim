@@ -1,0 +1,7 @@
+syntax:glob
+.DS_Store
+.netrwhist
+*.swp
+*.swo
+*.un~
+vim/tmp
