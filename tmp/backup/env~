@@ -1,8 +1,0 @@
-shopt -s histappend
-PROMPT_COMMAND='history -a'
-
-export EDITOR="mate -w"
-export GIT_EDITOR="mate -wl1"
-# export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
-#export PYTHONPATH="/usr/local/lib/python2.5/site-packages/"
-#export TM_PYCHECKER=pyflakes
