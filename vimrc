@@ -60,7 +60,7 @@ set colorcolumn=85
 let mapleader = ","
 
 " Edit .vimrc
-nmap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
+nmap <leader>ev :e $MYVIMRC<cr>
 
 " Searching
 nnoremap / /\v
