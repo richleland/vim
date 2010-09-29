@@ -94,4 +94,4 @@ map <leader>a :Ack
 " NERD Tree
 map <F2> :NERDTreeToggle<cr>
 let NERDTreeIgnore=['.vim$', '\~$', '.*\.pyc$', 'pip-log\.txt$']
-
+let NERDTreeShowBookmarks=1
