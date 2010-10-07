@@ -99,3 +99,6 @@ map <leader>a :Ack
 map <F2> :NERDTreeToggle<cr>
 let NERDTreeIgnore=['.vim$', '\~$', '.*\.pyc$', 'pip-log\.txt$']
 let NERDTreeShowBookmarks=1
+
+" pydiction (py tab-completion)
+let g:pydiction_location = '~/.vim/ftplugin/pydiction/complete-dict'
