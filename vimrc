@@ -50,6 +50,10 @@ set ruler
 set backspace=indent,eol,start
 set laststatus=2
 
+" Buffers
+nnoremap <C-n> :bnext<cr>
+nnoremap <C-p> :bprevious<cr>
+
 " Soft/hard wrapping
 set wrap
 set textwidth=79
