@@ -108,3 +108,6 @@ let g:pydiction_location = '~/.vim/ftplugin/pydiction/complete-dict'
 let g:gist_clip_command = 'pbcopy'
 let g:gist_detect_filetype = 1
 let g:gist_open_browser_after_post = 1
+
+" snipmate
+autocmd FileType html set ft=htmldjango.html

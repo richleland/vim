@@ -8,3 +8,4 @@ syntax:glob
 *~
 tmp
 .git
+doc/tags
