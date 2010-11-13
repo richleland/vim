@@ -1,6 +1,7 @@
 " bundle auto-loading with pathogen
 filetype off
 call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
 filetype plugin indent on
 
 " don't worry about compatibility with vi
