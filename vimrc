@@ -111,3 +111,6 @@ let g:gist_open_browser_after_post = 1
 
 " snipmate
 autocmd FileType html set ft=htmldjango.html
+
+" Edit GTD file
+nmap <leader>g :e ~/Dropbox/GTD/today.txt<cr>
