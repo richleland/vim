@@ -66,6 +66,7 @@ let mapleader = ","
 
 " Edit .vimrc
 nmap <leader>ev :e $MYVIMRC<cr>
+nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 " Searching
 nnoremap / /\v
@@ -86,6 +87,12 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+" Creating underline/overline headings for markup languages
+" Inspired by http://sphinx.pocoo.org/rest.html#sections
+nnoremap <leader>1 yypVr=o<CR>
+nnoremap <leader>2 yypVr*o<CR>
+nnoremap <leader>3 yypVr-o<CR>
 
 " remove trailing whitespace
 autocmd BufWritePre *.py :%s/\s\+$//e
