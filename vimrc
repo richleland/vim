@@ -121,3 +121,6 @@ autocmd FileType html set ft=htmldjango.html
 
 " Edit GTD file
 nmap <leader>g :e ~/Dropbox/GTD/today.txt<cr>
+
+" Edit ssh_config file
+nmap <leader>sc :e ~/config-files/ssh_config<cr>
