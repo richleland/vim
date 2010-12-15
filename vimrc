@@ -56,7 +56,7 @@ nnoremap <C-n> :bnext<cr>
 nnoremap <C-p> :bprevious<cr>
 
 " Soft/hard wrapping
-set wrap
+set nowrap
 set textwidth=79
 set formatoptions=qrn1
 set colorcolumn=85
