@@ -50,6 +50,7 @@ set ttyfast
 set ruler
 set backspace=indent,eol,start
 set laststatus=2
+set statusline=%F\ %y\ [L%l/%L,C%c]\ (%p%%)\ %{fugitive#statusline()}
 
 " Soft/hard wrapping
 set nowrap
