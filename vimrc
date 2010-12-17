@@ -51,18 +51,19 @@ set ruler
 set backspace=indent,eol,start
 set laststatus=2
 
-" Buffers
-nnoremap <C-n> :bnext<cr>
-nnoremap <C-p> :bprevious<cr>
-
 " Soft/hard wrapping
 set nowrap
-set textwidth=79
+set textwidth=0
+set wrapmargin=0
 set formatoptions=qrn1
 set colorcolumn=85
 
 " change the leader key
 let mapleader = ","
+
+" Buffers
+nnoremap <leader>n :bnext<cr>
+nnoremap <leader>p :bprevious<cr>
 
 " Edit .vimrc
 nmap <leader>ev :e $MYVIMRC<cr>
