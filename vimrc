@@ -94,9 +94,6 @@ nnoremap <leader>1 yypVr=o<CR>
 nnoremap <leader>2 yypVr*o<CR>
 nnoremap <leader>3 yypVr-o<CR>
 
-" remove trailing whitespace
-autocmd BufWritePre *.py :%s/\s\+$//e
-
 " diff
 nmap <leader>d :!hg diff %<cr>
 
@@ -127,3 +124,15 @@ nmap <leader>sc :e ~/config-files/ssh_config<cr>
 
 " YankRing.vim
 nnoremap <silent> <leader>y :YRShow<CR>
+
+"
+" file type specific
+"
+
+" ruby
+autocmd BufNewFile,BufRead Gemfile setlocal filetype=ruby
+autocmd FileType ruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
+
+" python
+autocmd BufWritePre *.py :%s/\s\+$//e
+
