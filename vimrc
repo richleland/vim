@@ -126,6 +126,9 @@ nmap <leader>sc :e ~/config-files/ssh_config<cr>
 " YankRing.vim
 nnoremap <silent> <leader>y :YRShow<CR>
 
+" ragtag
+let g:ragtag_global_maps = 1
+
 "
 " file type specific
 "
