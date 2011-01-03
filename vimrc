@@ -41,6 +41,7 @@ set scrolloff=3
 set autoindent
 set showmode
 set showcmd
+set cmdheight=2
 set hidden
 set wildmenu
 set wildmode=list:longest
@@ -53,7 +54,7 @@ set laststatus=2
 set statusline=%F\ %y\ [L%l/%L,C%c]\ (%p%%)\ %{fugitive#statusline()}
 
 " Soft/hard wrapping
-set nowrap
+set wrap
 set textwidth=0
 set wrapmargin=0
 set formatoptions=qrn1
@@ -100,12 +101,13 @@ nnoremap <leader>3 yypVr-o<CR>
 nmap <leader>d :!hg diff %<cr>
 
 " Ack
-map <leader>a :Ack
+map <leader>a :Ack 
 
 " NERD Tree
 map <F2> :NERDTreeToggle<cr>
 let NERDTreeIgnore=['.vim$', '\~$', '.*\.pyc$', 'pip-log\.txt$']
 let NERDTreeShowBookmarks=1
+let NERDTreeQuitOnOpen=1
 
 " pydiction (py tab-completion)
 let g:pydiction_location = '~/.vim/ftplugin/pydiction/complete-dict'
