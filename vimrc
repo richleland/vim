@@ -129,6 +129,9 @@ nmap <leader>sc :e ~/config-files/ssh_config<cr>
 " YankRing.vim
 nnoremap <silent> <leader>y :YRShow<CR>
 
+" open location in Finder
+nmap <leader>o :!open 
+
 " ragtag
 let g:ragtag_global_maps = 1
 
