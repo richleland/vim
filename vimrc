@@ -97,9 +97,6 @@ nnoremap <leader>1 yypVr=o<CR>
 nnoremap <leader>2 yypVr*o<CR>
 nnoremap <leader>3 yypVr-o<CR>
 
-" diff
-nmap <leader>d :!hg diff %<cr>
-
 " Ack
 map <leader>a :Ack 
 
@@ -131,6 +128,12 @@ nnoremap <silent> <leader>y :YRShow<CR>
 
 " open location in Finder
 nmap <leader>o :!open 
+
+" remove all empty lines or lines with only whitespace characters
+nmap <leader>S :g/^\s*$/d<cr>
+
+" re-indent entire file
+nmap <leader>i ggVG=
 
 " ragtag
 let g:ragtag_global_maps = 1
