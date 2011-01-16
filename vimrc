@@ -127,7 +127,11 @@ nmap <leader>sc :e ~/config-files/ssh_config<cr>
 nnoremap <silent> <leader>y :YRShow<CR>
 
 " open location in Finder
-nmap <leader>o :!open 
+nmap <leader>fo :!open 
+
+" create blank space, returning to normal mode
+nmap <leader>o o<esc>
+nmap <leader>O O<esc>
 
 " remove all empty lines or lines with only whitespace characters
 nmap <leader>S :g/^\s*$/d<cr>
