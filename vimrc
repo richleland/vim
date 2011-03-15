@@ -148,6 +148,7 @@ let g:ragtag_global_maps = 1
 
 " ruby
 autocmd BufNewFile,BufRead Gemfile setlocal filetype=ruby
+autocmd BufNewFile,BufRead Vagrantfile setlocal filetype=ruby
 autocmd FileType ruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
 " python
