@@ -106,9 +106,6 @@ let NERDTreeIgnore=['.vim$', '\~$', '.*\.pyc$', 'pip-log\.txt$']
 let NERDTreeShowBookmarks=1
 let NERDTreeQuitOnOpen=1
 
-" pydiction (py tab-completion)
-let g:pydiction_location = '~/.vim/ftplugin/pydiction/complete-dict'
-
 " gist.vim
 let g:gist_clip_command = 'pbcopy'
 let g:gist_detect_filetype = 1
