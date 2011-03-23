@@ -78,7 +78,7 @@ let mapleader = ","
 
 " Buffers
 nnoremap <leader>n :bnext<cr>
-nnoremap <leader>p :bprevious<cr>
+nnoremap <leader>N :bprevious<cr>
 
 " Edit .vimrc
 nmap <leader>ev :e $MYVIMRC<cr>
