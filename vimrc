@@ -165,6 +165,9 @@ autocmd FileType ruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd BufWritePre *.py :%s/\s\+$//e
 autocmd BufNewFile,BufRead *.wsgi setlocal filetype=python
 
+" javascript
+autocmd BufNewFile,BufRead *.json setlocal filetype=javascript
+
 " restructured text
 autocmd FileType rst setlocal noautoindent nocindent nosmartindent indentexpr=
 
