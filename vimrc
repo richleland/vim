@@ -53,19 +53,6 @@ set backspace=indent,eol,start
 set laststatus=2
 set statusline=%F\ %y\ [L%l/%L,C%c]\ (%p%%)\ %{fugitive#statusline()}
 
-" Remap the tab key to do autocompletion or indentation depending on the
-" context (from http://www.vim.org/tips/tip.php?tip_id=102)
-"function! InsertTabWrapper()
-    "let col = col('.') - 1
-    "if !col || getline('.')[col - 1] !~ '\k'
-        "return "\<tab>"
-    "else
-        "return "\<c-p>"
-    "endif
-"endfunction
-"inoremap <tab> <c-r>=InsertTabWrapper()<cr>
-"inoremap <s-tab> <c-n>
-
 " Soft/hard wrapping
 set wrap
 set textwidth=0
@@ -148,6 +135,9 @@ nmap <leader>S :g/^\s*$/d<cr>
 
 " re-indent entire file
 nmap <leader>i ggVG=
+
+" build sphinx docs
+nnoremap <leader>m :!make html<cr><cr>
 
 " ragtag
 let g:ragtag_global_maps = 1
