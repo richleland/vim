@@ -137,7 +137,7 @@ nmap <leader>S :g/^\s*$/d<cr>
 nmap <leader>i ggVG=
 
 " build sphinx docs
-nnoremap <leader>m :!make html<cr><cr>
+nnoremap <leader>m :!make html<cr>
 
 " ragtag
 let g:ragtag_global_maps = 1
@@ -156,6 +156,7 @@ autocmd BufWritePre *.py :%s/\s\+$//e
 autocmd BufNewFile,BufRead *.wsgi setlocal filetype=python
 
 " javascript
+autocmd FileType javascript setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd BufNewFile,BufRead *.json setlocal filetype=javascript
 
 " restructured text
