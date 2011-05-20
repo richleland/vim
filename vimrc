@@ -137,10 +137,13 @@ nmap <leader>S :g/^\s*$/d<cr>
 nmap <leader>i ggVG=
 
 " build sphinx docs
-nnoremap <leader>m :!make html<cr>
+nnoremap <leader>bs :!make html<cr>
 
 " ragtag
 let g:ragtag_global_maps = 1
+
+" easymotion
+let g:EasyMotion_leader_key = '<leader>m'
 
 "
 " file type specific
