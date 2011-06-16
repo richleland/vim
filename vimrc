@@ -64,8 +64,8 @@ set colorcolumn=85
 let mapleader = ","
 
 " Buffers
-nnoremap <leader>n :bnext<cr>
-nnoremap <leader>N :bprevious<cr>
+"nnoremap <leader>n :bnext<cr>
+"nnoremap <leader>N :bprevious<cr>
 
 " Edit .vimrc
 nmap <leader>ev :e $MYVIMRC<cr>
