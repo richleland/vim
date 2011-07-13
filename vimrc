@@ -105,6 +105,7 @@ map <F2> :NERDTreeToggle<cr>
 let NERDTreeIgnore=['.vim$', '\~$', '.*\.pyc$', 'pip-log\.txt$']
 let NERDTreeShowBookmarks=1
 let NERDTreeQuitOnOpen=1
+let NERDTreeDirArrows=1
 
 " gist.vim
 let g:gist_clip_command = 'pbcopy'
