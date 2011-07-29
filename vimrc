@@ -107,6 +107,15 @@ let NERDTreeShowBookmarks=1
 let NERDTreeQuitOnOpen=1
 let NERDTreeDirArrows=1
 
+" TagList
+map <F9> :TlistToggle<cr>
+set tags=tags;$HOME/.vim/tags/
+let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
+let Tlist_GainFocus_On_ToggleOpen = 1
+let Tlist_Close_On_Select = 1
+let Tlist_Use_Right_Window = 1
+let Tlist_File_Fold_Auto_Close = 1
+
 " gist.vim
 let g:gist_clip_command = 'pbcopy'
 let g:gist_detect_filetype = 1
