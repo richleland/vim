@@ -7,5 +7,10 @@ if has("gui_macvim")
     set guifont=Inconsolata:h14
     " always hide the toolbar icons
     set guioptions-=T
+    " always hide the scrollbars
+    set guioptions-=L
+    set guioptions-=l
+    set guioptions-=R
+    set guioptions-=r
 end
 
