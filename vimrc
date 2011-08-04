@@ -7,6 +7,10 @@ filetype plugin indent on
 " don't worry about compatibility with vi
 set nocompatible
 
+" 256 colors in terminal
+set t_Co=256
+colorscheme railscasts
+
 " security
 set modelines=0
 
@@ -52,6 +56,7 @@ set ruler
 set backspace=indent,eol,start
 set laststatus=2
 set statusline=%F\ %y\ [L%l/%L,C%c]\ (%p%%)\ %{fugitive#statusline()}
+syntax enable
 
 " Soft/hard wrapping
 set wrap
@@ -97,41 +102,11 @@ nnoremap <leader>1 yypVr=o<CR>
 nnoremap <leader>2 yypVr*o<CR>
 nnoremap <leader>3 yypVr-o<CR>
 
-" Ack
-map <leader>a :Ack 
-
-" NERD Tree
-map <F2> :NERDTreeToggle<cr>
-let NERDTreeIgnore=['.vim$', '\~$', '.*\.pyc$', 'pip-log\.txt$']
-let NERDTreeShowBookmarks=1
-let NERDTreeQuitOnOpen=1
-let NERDTreeDirArrows=1
-
-" TagList
-map <F9> :TlistToggle<cr>
-set tags=tags;$HOME/.vim/tags/
-let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
-let Tlist_GainFocus_On_ToggleOpen = 1
-let Tlist_Close_On_Select = 1
-let Tlist_Use_Right_Window = 1
-let Tlist_File_Fold_Auto_Close = 1
-
-" gist.vim
-let g:gist_clip_command = 'pbcopy'
-let g:gist_detect_filetype = 1
-let g:gist_open_browser_after_post = 1
-
-" snipmate
-autocmd FileType html set ft=htmldjango.html
-
 " Edit GTD file
 nmap <leader>g :e ~/Dropbox/GTD/today.txt<cr>
 
 " Edit ssh_config file
 nmap <leader>sc :e ~/config-files/ssh_config<cr>
-
-" YankRing.vim
-nnoremap <silent> <leader>y :YRShow<CR>
 
 " open location in Finder
 nmap <leader>fo :!open 
@@ -149,15 +124,67 @@ nmap <leader>i ggVG=
 " build sphinx docs
 nnoremap <leader>bs :!make html<cr>
 
-" ragtag
-let g:ragtag_global_maps = 1
+if has("gui_running")
+    colorscheme railscasts
+    "set guifont=Menlo:h12
+    set guifont=Inconsolata:h14
+    " always hide the toolbar icons
+    set guioptions-=T
+    " always hide the scrollbars
+    set guioptions-=L
+    set guioptions-=l
+    set guioptions-=R
+    set guioptions-=r
+
+    if has("gui_macvim")
+        macmenu &File.New\ Tab key=<nop>
+        map <leader>t <Plug>PeepOpen
+    end
+end
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" PLUGINS
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Ack
+map <leader>a :Ack 
 
 " easymotion
 let g:EasyMotion_leader_key = '<leader>m'
 
-"
-" file type specific
-"
+" gist.vim
+let g:gist_clip_command = 'pbcopy'
+let g:gist_detect_filetype = 1
+let g:gist_open_browser_after_post = 1
+
+" NERD Tree
+map <F2> :NERDTreeToggle<cr>
+let NERDTreeIgnore=['.vim$', '\~$', '.*\.pyc$', 'pip-log\.txt$']
+let NERDTreeShowBookmarks=1
+let NERDTreeQuitOnOpen=1
+let NERDTreeDirArrows=1
+
+" ragtag
+let g:ragtag_global_maps = 1
+
+" snipmate
+autocmd FileType html set ft=htmldjango.html
+
+" TagList
+map <F9> :TlistToggle<cr>
+set tags=tags;$HOME/.vim/tags/
+let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
+let Tlist_GainFocus_On_ToggleOpen = 1
+let Tlist_Close_On_Select = 1
+let Tlist_Use_Right_Window = 1
+let Tlist_File_Fold_Auto_Close = 1
+
+" YankRing.vim
+nnoremap <silent> <leader>y :YRShow<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" FILE TYPE SPECIFIC
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " ruby
 autocmd BufNewFile,BufRead Gemfile setlocal filetype=ruby
