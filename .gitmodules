@@ -55,3 +55,6 @@
 [submodule "bundle/taglist.vim"]
 	path = bundle/taglist.vim
 	url = https://github.com/vim-scripts/taglist.vim
+[submodule "bundle/bufkill.vim"]
+	path = bundle/bufkill.vim
+	url = https://github.com/vim-scripts/bufkill.vim.git
