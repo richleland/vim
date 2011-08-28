@@ -54,6 +54,10 @@ highlight StatusLine                guifg=#000000 guibg=#FFFFFF ctermfg=7 ctermb
 highlight StatusLineNC              guifg=#000000 guibg=#4C4C4C ctermfg=8 ctermbg=9 " set inactive statusline to black on grey
 
 highlight ColorColumn               guibg=#333333 ctermbg=159
+highlight Pmenu                     guifg=#F6F3E8 ctermfg=255 guibg=#444444 ctermbg=238 gui=NONE
+highlight PmenuSel                  guifg=#000000 ctermfg=16 guibg=#A5C261 ctermbg=248 gui=NONE
+highlight PMenuSbar                 guibg=#5A647E ctermbg=240 gui=NONE
+highlight PMenuThumb                guibg=#AAAAAA ctermbg=248 gui=NONE
 
 highlight Comment                   guifg=#BC9458 ctermfg=180 gui=italic
 highlight Constant                  guifg=#6D9CBE ctermfg=73
