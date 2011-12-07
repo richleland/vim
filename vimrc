@@ -64,7 +64,7 @@ set wrap
 set textwidth=0
 set wrapmargin=0
 set formatoptions=qrn1
-set colorcolumn=85
+set colorcolumn=80
 
 " change the leader key
 let mapleader = ","
@@ -195,6 +195,10 @@ autocmd FileType ruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
 " python
 autocmd BufWritePre *.py :%s/\s\+$//e
 autocmd BufNewFile,BufRead *.wsgi setlocal filetype=python
+
+" html
+autocmd FileType html setlocal tabstop=2 softtabstop=2 shiftwidth=2
+autocmd FileType htmldjango setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
 " javascript
 autocmd FileType javascript setlocal tabstop=2 softtabstop=2 shiftwidth=2
