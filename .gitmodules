@@ -61,3 +61,6 @@
 [submodule "bundle/pyflakes-vim"]
 	path = bundle/pyflakes-vim
 	url = https://github.com/kevinw/pyflakes-vim.git
+[submodule "bundle/jade.vim"]
+	path = bundle/jade.vim
+	url = https://github.com/vim-scripts/jade.vim.git
