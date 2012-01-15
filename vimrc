@@ -129,6 +129,7 @@ if has("gui_running")
     colorscheme railscasts
     "set guifont=Menlo:h12
     set guifont=Inconsolata:h14
+    "set guifont=Inconsolata-dz\ for\ Powerline:h12
     " always hide the toolbar icons
     set guioptions-=T
     " always hide the scrollbars
@@ -182,6 +183,9 @@ let Tlist_File_Fold_Auto_Close = 1
 
 " YankRing.vim
 nnoremap <silent> <leader>y :YRShow<CR>
+
+" powerline
+let g:Powerline_symbols="compatible"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FILE TYPE SPECIFIC
