@@ -211,3 +211,15 @@ autocmd BufNewFile,BufRead *.json setlocal filetype=javascript
 " restructured text
 autocmd FileType rst setlocal noautoindent nocindent nosmartindent indentexpr=
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" SUPREME LAZYNESS, aka AWESOMENESS
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Reload Google Chrome on Mac from Vim.
+" https://gist.github.com/2001993
+" Adapted from:  https://github.com/gcollazo/BrowserRefresh-Sublime/
+function! ChromeReload()
+    if has("gui_macvim")
+        :silent !osascript ~/.vim/reloadchrome.scpt > /dev/null 2>&1
+    endif
+endfunction
+nmap <leader>r :call ChromeReload()<cr>
