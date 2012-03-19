@@ -194,6 +194,9 @@ let g:flake8_ignore="E501,W293,W404"
 " FILE TYPE SPECIFIC
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" css
+autocmd FileType less setlocal filetype=less
+
 " ruby
 autocmd BufNewFile,BufRead Gemfile setlocal filetype=ruby
 autocmd BufNewFile,BufRead Vagrantfile setlocal filetype=ruby
