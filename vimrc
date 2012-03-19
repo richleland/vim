@@ -187,6 +187,9 @@ nnoremap <silent> <leader>y :YRShow<CR>
 " powerline
 let g:Powerline_symbols="compatible"
 
+" flake8
+let g:flake8_ignore="E501,W293,W404"
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FILE TYPE SPECIFIC
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
