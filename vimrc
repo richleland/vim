@@ -198,6 +198,7 @@ autocmd FileType ruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
 " python
 autocmd BufWritePre *.py :%s/\s\+$//e
+autocmd BufWritePost *.py call Flake8()
 autocmd BufNewFile,BufRead *.wsgi setlocal filetype=python
 
 " html
