@@ -80,6 +80,7 @@ nmap <silent> <leader>sv :so $MYVIMRC<CR>
 " Searching
 nnoremap / /\v
 vnoremap / /\v
+nnoremap <leader>z xhp/<C-R>-<CR>
 set ignorecase
 set smartcase
 set incsearch
