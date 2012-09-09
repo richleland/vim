@@ -103,6 +103,7 @@ nnoremap <C-l> <C-w>l
 nnoremap <leader>1 yypVr=o<CR>
 nnoremap <leader>2 yypVr*o<CR>
 nnoremap <leader>3 yypVr-o<CR>
+nnoremap <leader>4 yypVr~o<CR>
 
 " Edit GTD file
 nmap <leader>g :e ~/Dropbox/GTD/today.txt<cr>
