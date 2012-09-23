@@ -38,6 +38,9 @@ inoremap <right> <nop>
 nnoremap j gj
 nnoremap k gk
 inoremap jj <esc>
+
+" folding
+"set foldmethod=syntax
  
 " misc. configs
 set number
@@ -126,6 +129,9 @@ nmap <leader>i ggVG=
 
 " build sphinx docs
 nnoremap <leader>bs :!make html<cr>
+
+" read in contents of curl
+nnoremap <leader>r :read !curl -s --raw 
 
 if has("gui_running")
     colorscheme railscasts
@@ -231,4 +237,4 @@ function! ChromeReload()
         :silent !osascript ~/.vim/reloadchrome.scpt > /dev/null 2>&1
     endif
 endfunction
-nmap <leader>r :call ChromeReload()<cr>
+nmap <leader>cr :call ChromeReload()<cr>
