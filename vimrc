@@ -215,9 +215,17 @@ autocmd BufWritePre *.py :%s/\s\+$//e
 autocmd BufWritePost *.py call Flake8()
 autocmd BufNewFile,BufRead *.wsgi setlocal filetype=python
 
+" php
+autocmd BufWritePre *.php :%s/\s\+$//e
+autocmd BufWritePre *.php :retab! 4
+
 " html
 autocmd FileType html setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType htmldjango setlocal tabstop=2 softtabstop=2 shiftwidth=2
+
+" yaml
+autocmd FileType yaml setlocal tabstop=2 softtabstop=2 shiftwidth=2
+autocmd BufNewFile,BufRead *.sls setlocal filetype=yaml
 
 " javascript
 autocmd FileType javascript setlocal tabstop=2 softtabstop=2 shiftwidth=2
