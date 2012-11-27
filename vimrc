@@ -228,11 +228,15 @@ autocmd FileType yaml setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd BufNewFile,BufRead *.sls setlocal filetype=yaml
 
 " javascript
+autocmd BufWritePre *.js :%s/\s\+$//e
 autocmd FileType javascript setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd BufNewFile,BufRead *.json setlocal filetype=javascript
 
 " restructured text
 autocmd FileType rst setlocal noautoindent nocindent nosmartindent indentexpr=
+
+" jinja
+"autocmd BufNewFile,BufRead *.jinja setlocal filetype=jinja
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " SUPREME LAZYNESS, aka AWESOMENESS
