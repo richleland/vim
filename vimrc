@@ -21,11 +21,11 @@ set softtabstop=4
 set expandtab
 
 " Backups
-set backupdir=~/.vim/tmp/backup//
-set directory=~/.vim/tmp/swap//
+set backupdir=~/.vim/tmp/backup//,/tmp
+set directory=~/.vim/tmp/swap//,/tmp
+set undodir=~/.vim/tmp/undo//,/tmp
 set backup                        
 set undofile
-set undodir=~/.vim/tmp/undo//
 
 " use hjkl
 nnoremap <up> <nop>
