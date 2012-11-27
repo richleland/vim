@@ -25,6 +25,7 @@ set backupdir=~/.vim/tmp/backup//
 set directory=~/.vim/tmp/swap//
 set backup                        
 set undofile
+set undodir=~/.vim/tmp/undo//
 
 " use hjkl
 nnoremap <up> <nop>
