@@ -82,3 +82,6 @@
 [submodule "bundle/jinja-vim"]
 	path = bundle/jinja-vim
 	url = https://github.com/uggedal/jinja-vim.git
+[submodule "bundle/YankRing"]
+	path = bundle/YankRing
+	url = https://github.com/vim-scripts/YankRing.vim.git
