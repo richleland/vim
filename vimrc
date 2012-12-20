@@ -192,6 +192,7 @@ let Tlist_File_Fold_Auto_Close = 1
 
 " YankRing.vim
 nnoremap <silent> <leader>y :YRShow<CR>
+let g:yankring_dot_repeat_yank = 1
 
 " powerline
 let g:Powerline_symbols="compatible"
@@ -215,14 +216,15 @@ autocmd FileType ruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd BufWritePre *.py :%s/\s\+$//e
 autocmd BufWritePost *.py call Flake8()
 autocmd BufNewFile,BufRead *.wsgi setlocal filetype=python
+autocmd FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4
 
 " php
 autocmd BufWritePre *.php :%s/\s\+$//e
 autocmd BufWritePre *.php :retab! 4
 
 " html
-autocmd FileType html setlocal tabstop=2 softtabstop=2 shiftwidth=2
-autocmd FileType htmldjango setlocal tabstop=2 softtabstop=2 shiftwidth=2
+autocmd FileType html setlocal tabstop=4 softtabstop=4 shiftwidth=4
+autocmd FileType htmldjango setlocal tabstop=4 softtabstop=4 shiftwidth=4
 
 " yaml
 autocmd FileType yaml setlocal tabstop=2 softtabstop=2 shiftwidth=2
@@ -230,7 +232,7 @@ autocmd BufNewFile,BufRead *.sls setlocal filetype=yaml
 
 " javascript
 autocmd BufWritePre *.js :%s/\s\+$//e
-autocmd FileType javascript setlocal tabstop=2 softtabstop=2 shiftwidth=2
+autocmd FileType javascript setlocal tabstop=4 softtabstop=4 shiftwidth=4
 autocmd BufNewFile,BufRead *.json setlocal filetype=javascript
 
 " restructured text
