@@ -85,3 +85,6 @@
 [submodule "bundle/YankRing"]
 	path = bundle/YankRing
 	url = https://github.com/vim-scripts/YankRing.vim.git
+[submodule "bundle/vim-gitcutter"]
+	path = bundle/vim-gitcutter
+	url = git://github.com/airblade/vim-gitgutter.git
