@@ -1,5 +1,5 @@
 .netrwhist
-*.pyc
+*.py[co]
 *.swp
 *.swo
 *.un~
