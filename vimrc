@@ -24,9 +24,11 @@ set expandtab
 " Backups
 set backupdir=~/.vim/tmp/backup//,/tmp
 set directory=~/.vim/tmp/swap//,/tmp
-set undodir=~/.vim/tmp/undo//,/tmp
 set backup                        
-set undofile
+if version >= 703
+    set undodir=~/.vim/tmp/undo//,/tmp
+    set undofile
+endif
 
 " use hjkl
 nnoremap <up> <nop>
@@ -69,7 +71,9 @@ set wrap
 set textwidth=0
 set wrapmargin=0
 set formatoptions=qrn1
-set colorcolumn=80
+if version >= 703
+    set colorcolumn=80
+endif
 
 " change the leader key
 let mapleader = ","
