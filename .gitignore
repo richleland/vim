@@ -5,4 +5,5 @@
 *.un~
 *~
 tmp
-bundle/*/doc/tags
+bundle/*
+!bundle/README*
