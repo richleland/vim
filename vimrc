@@ -25,7 +25,7 @@ set expandtab
 set backupdir=~/.vim/tmp/backup//,/tmp
 set directory=~/.vim/tmp/swap//,/tmp
 set undodir=~/.vim/tmp/undo//,/tmp
-set backup                        
+set backup
 set undofile
 
 " use hjkl
@@ -43,7 +43,7 @@ inoremap jj <esc>
 
 " folding
 "set foldmethod=syntax
- 
+
 " misc. configs
 set number
 set encoding=utf-8
@@ -117,7 +117,7 @@ nmap <leader>g :e ~/Dropbox/GTD/today.txt<cr>
 nmap <leader>sc :e ~/config-files/ssh_config<cr>
 
 " open location in Finder
-nmap <leader>fo :!open 
+nmap <leader>fo :!open
 
 " create blank space, returning to normal mode
 nmap <leader>o o<esc>
@@ -133,7 +133,7 @@ nmap <leader>i ggVG=
 nnoremap <leader>bs :!make html<cr>
 
 " read in contents of curl
-nnoremap <leader>r :read !curl -s --raw 
+nnoremap <leader>r :read !curl -s --raw
 
 if has("gui_running")
     colorscheme railscasts
@@ -159,7 +159,7 @@ end
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Ack
-map <leader>a :Ack 
+map <leader>a :Ack
 
 " easymotion
 let g:EasyMotion_leader_key = '<leader>m'
@@ -236,7 +236,7 @@ autocmd BufNewFile,BufRead *.sls setlocal filetype=yaml
 
 " javascript
 autocmd BufWritePre *.js :%s/\s\+$//e
-autocmd FileType javascript setlocal tabstop=4 softtabstop=4 shiftwidth=4
+autocmd FileType javascript setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd BufNewFile,BufRead *.json setlocal filetype=javascript
 
 " restructured text
