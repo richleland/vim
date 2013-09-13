@@ -178,8 +178,8 @@ nnoremap <leader>r :read !curl -s --raw
 if has("gui_running")
     colorscheme railscasts
     "set guifont=Menlo:h12
-    set guifont=Inconsolata:h14
-    "set guifont=Inconsolata-dz\ for\ Powerline:h12
+    "set guifont=Inconsolata:h14
+    set guifont=Inconsolata-dz\ for\ Powerline:h12
     " always hide the toolbar icons
     set guioptions-=T
     " always hide the scrollbars
@@ -236,6 +236,9 @@ nnoremap <silent> <leader>y :YRShow<CR>
 let g:yankring_dot_repeat_yank = 1
 
 " powerline
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
 let g:Powerline_symbols="compatible"
 
 " flake8
