@@ -139,6 +139,9 @@ nnoremap <leader>bs :!make html<cr>
 " read in contents of curl
 nnoremap <leader>r :read !curl -s --raw
 
+" invoke CtrlP
+nnoremap <leader>p :CtrlP<cr>
+
 if has("gui_running")
     colorscheme railscasts
     "set guifont=Inconsolata:h14
@@ -207,6 +210,9 @@ let g:Powerline_symbols="compatible"
 " flake8
 let g:flake8_ignore="E501,W293,W404"
 
+" syntastic
+let g:syntastic_javascript_checkers=['jshint']
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FILE TYPE SPECIFIC
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -233,8 +239,8 @@ autocmd BufWritePre *.php :%s/\s\+$//e
 autocmd BufWritePre *.php :retab! 4
 
 " html
-autocmd FileType html setlocal tabstop=4 softtabstop=4 shiftwidth=4
-autocmd FileType htmldjango setlocal tabstop=4 softtabstop=4 shiftwidth=4
+autocmd FileType html setlocal tabstop=2 softtabstop=2 shiftwidth=2
+autocmd FileType htmldjango setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
 " yaml
 autocmd FileType yaml setlocal tabstop=2 softtabstop=2 shiftwidth=2
@@ -244,6 +250,7 @@ autocmd BufNewFile,BufRead *.sls setlocal filetype=yaml
 autocmd BufWritePre *.js :%s/\s\+$//e
 autocmd FileType javascript setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd BufNewFile,BufRead *.json setlocal filetype=javascript
+autocmd BufNewFile,BufRead .jshintrc setlocal filetype=javascript
 
 " restructured text
 autocmd FileType rst setlocal noautoindent nocindent nosmartindent indentexpr=
