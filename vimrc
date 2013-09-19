@@ -218,6 +218,7 @@ let g:syntastic_javascript_checkers=['jshint']
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " css
+autocmd FileType css setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType less setlocal filetype=less
 
 " ruby
