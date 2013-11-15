@@ -185,8 +185,12 @@ let NERDTreeDirArrows=1
 " ragtag
 let g:ragtag_global_maps = 1
 
-" snipmate
-autocmd FileType html set ft=htmldjango.html
+" ultisnips
+"set rtp+=~/.vim/bundle/ultisnips
+"set rtp+=~/.vim/snippets
+let g:UltiSnipsSnippetDirectories=['snippets']
+let g:UltiSnipsExpandTrigger="<c-tab>"
+let g:UltiSnipsListSnippets="<c-s-tab>"
 
 " TagList
 map <F9> :TlistToggle<cr>
@@ -219,6 +223,7 @@ let g:syntastic_javascript_checkers=['jshint']
 
 " css
 autocmd FileType css setlocal tabstop=2 softtabstop=2 shiftwidth=2
+autocmd FileType scss setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType less setlocal filetype=less
 
 " ruby
@@ -252,9 +257,14 @@ autocmd BufWritePre *.js :%s/\s\+$//e
 autocmd FileType javascript setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd BufNewFile,BufRead *.json setlocal filetype=javascript
 autocmd BufNewFile,BufRead .jshintrc setlocal filetype=javascript
+autocmd BufNewFile,BufRead *.hbs setlocal filetype=handlebars
 
 " restructured text
 autocmd FileType rst setlocal noautoindent nocindent nosmartindent indentexpr=
+
+" markdown
+autocmd FileType markdown setlocal tabstop=2 softtabstop=2 shiftwidth=2
+autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 
 " jinja
 "autocmd BufNewFile,BufRead *.jinja setlocal filetype=jinja
