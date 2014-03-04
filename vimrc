@@ -213,6 +213,13 @@ let g:flake8_ignore="E501,W293,W404"
 " syntastic
 let g:syntastic_javascript_checkers=['jshint']
 
+" CtrlP
+let g:ctlrp_working_path_mode = 'ra'
+let g:ctrlp_custom_ignore = {
+    \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+    \ 'file': '\v\.(exe|so|dll)$',
+    \ }
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FILE TYPE SPECIFIC
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
