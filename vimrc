@@ -154,7 +154,6 @@ if has("gui_running")
 
     if has("gui_macvim")
         macmenu &File.New\ Tab key=<nop>
-        map <leader>t <Plug>PeepOpen
     end
 end
 
@@ -188,14 +187,10 @@ let g:UltiSnipsSnippetDirectories=['bundle/ultisnips/UltiSnips', 'snippets']
 let g:UltiSnipsExpandTrigger="<c-tab>"
 let g:UltiSnipsListSnippets="<c-s-tab>"
 
-" TagList
-map <F9> :TlistToggle<cr>
-set tags=tags;$HOME/.vim/tags/
-let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
-let Tlist_GainFocus_On_ToggleOpen = 1
-let Tlist_Close_On_Select = 1
-let Tlist_Use_Right_Window = 1
-let Tlist_File_Fold_Auto_Close = 1
+" tagbar
+nmap <leader>t :TagbarToggle<cr>
+let g:tagbar_autoclose = 1
+let g:tagbar_iconchars = ['▸', '▾']
 
 " YankRing.vim
 nnoremap <silent> <leader>y :YRShow<CR>
