@@ -173,7 +173,7 @@ let g:gist_detect_filetype = 1
 let g:gist_open_browser_after_post = 1
 
 " NERD Tree
-map <F2> :NERDTreeToggle<cr>
+map <c-n> :NERDTreeToggle<cr>
 let NERDTreeIgnore=['\~$', '.*\.pyc$', 'pip-log\.txt$']
 let NERDTreeShowBookmarks=1
 let NERDTreeQuitOnOpen=1
@@ -194,7 +194,9 @@ let g:tagbar_iconchars = ['▸', '▾']
 
 " YankRing.vim
 nnoremap <silent> <leader>y :YRShow<CR>
-let g:yankring_dot_repeat_yank = 1
+let g:yankring_window_height = 10
+let g:yankring_replace_n_pkey = '<c-s-p>'
+let g:yankring_replace_n_nkey = '<c-s-n>'
 
 " powerline
 python from powerline.vim import setup as powerline_setup
