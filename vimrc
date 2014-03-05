@@ -182,10 +182,11 @@ let NERDTreeDirArrows=1
 " ragtag
 let g:ragtag_global_maps = 1
 
+" supertab
+let g:SuperTabDefaultCompletionType = '<c-n>'
+
 " ultisnips
-let g:UltiSnipsSnippetDirectories=['bundle/ultisnips/UltiSnips', 'snippets']
-let g:UltiSnipsExpandTrigger="<c-tab>"
-let g:UltiSnipsListSnippets="<c-s-tab>"
+let g:UltiSnipsSnippetDirectories=['bundle/ultisnips/UltiSnips', 'ultisnips']
 
 " tagbar
 nmap <leader>t :TagbarToggle<cr>
@@ -195,8 +196,8 @@ let g:tagbar_iconchars = ['▸', '▾']
 " YankRing.vim
 nnoremap <silent> <leader>y :YRShow<CR>
 let g:yankring_window_height = 10
-let g:yankring_replace_n_pkey = '<c-s-p>'
-let g:yankring_replace_n_nkey = '<c-s-n>'
+let g:yankring_replace_n_pkey = '<nul>'
+let g:yankring_replace_n_nkey = '<nul>'
 
 " powerline
 python from powerline.vim import setup as powerline_setup
