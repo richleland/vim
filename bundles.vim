@@ -15,6 +15,7 @@ Bundle 'godlygeek/tabular.git'
 Bundle 'groenewege/vim-less.git'
 Bundle 'jelera/vim-javascript-syntax'
 Bundle 'jmcantrell/vim-virtualenv.git'
+Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'
 Bundle "lepture/vim-jinja"
 Bundle 'majutsushi/tagbar'
