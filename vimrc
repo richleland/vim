@@ -182,11 +182,9 @@ let NERDTreeDirArrows=1
 " ragtag
 let g:ragtag_global_maps = 1
 
-" supertab
-let g:SuperTabDefaultCompletionType = '<c-n>'
-
 " ultisnips
-let g:UltiSnipsSnippetDirectories=['bundle/ultisnips/UltiSnips', 'ultisnips']
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsSnippetDirectories=['bundle/vim-snippets/UltiSnips', 'ultisnips']
 
 " tagbar
 nmap <leader>t :TagbarToggle<cr>
