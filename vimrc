@@ -182,6 +182,9 @@ let NERDTreeDirArrows=1
 " ragtag
 let g:ragtag_global_maps = 1
 
+" YouCompleteMe
+let g:ycm_collect_identifiers_from_comments_and_strings = 1
+
 " ultisnips
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsSnippetDirectories=['bundle/vim-snippets/UltiSnips', 'ultisnips']
@@ -194,7 +197,7 @@ let g:tagbar_iconchars = ['▸', '▾']
 " YankRing.vim
 nnoremap <silent> <leader>y :YRShow<CR>
 let g:yankring_window_height = 10
-let g:yankring_replace_n_pkey = '<nul>'
+let g:yankring_replace_n_pkey = '<C-y>'
 let g:yankring_replace_n_nkey = '<nul>'
 
 " powerline
@@ -259,6 +262,9 @@ autocmd BufNewFile,BufRead *.json setlocal filetype=javascript
 autocmd BufNewFile,BufRead .jshintrc setlocal filetype=javascript
 autocmd BufNewFile,BufRead .csslintrc setlocal filetype=javascript
 autocmd BufNewFile,BufRead *.hbs setlocal filetype=handlebars
+
+" conf files
+autocmd FileType nginx setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
 " restructured text
 autocmd FileType rst setlocal noautoindent nocindent nosmartindent indentexpr=
