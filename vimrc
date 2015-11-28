@@ -14,9 +14,9 @@ colorscheme railscasts
 set modelines=0
 
 " tabs/spaces
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set expandtab
 
 " Backups
@@ -65,7 +65,7 @@ set statusline=%F\ %y\ [L%l/%L,C%c]\ (%p%%)\ %{fugitive#statusline()}
 syntax enable
 
 " Soft/hard wrapping
-set wrap
+set nowrap
 set textwidth=0
 set wrapmargin=0
 set formatoptions=qrn1
@@ -167,6 +167,10 @@ map <leader>a :Ack
 " easymotion
 let g:EasyMotion_leader_key = '<leader>m'
 
+" indent-guides
+"let g:indent_guides_enable_on_vim_startup = 0
+"let g:indent_guides_guide_size = 1
+
 " gist.vim
 let g:gist_clip_command = 'pbcopy'
 let g:gist_detect_filetype = 1
@@ -184,6 +188,21 @@ let g:ragtag_global_maps = 1
 
 " YouCompleteMe
 let g:ycm_collect_identifiers_from_comments_and_strings = 1
+let g:ycm_filetype_blacklist = {
+      \ 'less' : 1,
+      \ 'css' : 1,
+      \ 'html' : 1,
+      \ 'tagbar' : 1,
+      \ 'qf' : 1,
+      \ 'notes' : 1,
+      \ 'markdown' : 1,
+      \ 'unite' : 1,
+      \ 'text' : 1,
+      \ 'vimwiki' : 1,
+      \ 'pandoc' : 1,
+      \ 'infolog' : 1,
+      \ 'mail' : 1
+      \}
 
 " ultisnips
 let g:UltiSnipsExpandTrigger="<c-j>"
@@ -197,7 +216,7 @@ let g:tagbar_iconchars = ['▸', '▾']
 " YankRing.vim
 nnoremap <silent> <leader>y :YRShow<CR>
 let g:yankring_window_height = 10
-let g:yankring_replace_n_pkey = '<C-y>'
+let g:yankring_replace_n_pkey = '<nul>'
 let g:yankring_replace_n_nkey = '<nul>'
 
 " powerline
@@ -215,7 +234,7 @@ let g:syntastic_javascript_checkers=['jshint']
 " CtrlP
 let g:ctlrp_working_path_mode = 'ra'
 let g:ctrlp_custom_ignore = {
-    \ 'dir':  '\v(\.git|\.hg|\.svn|node_modules|components|coverage)$',
+    \ 'dir':  '\v(\.git|\.hg|\.svn|node_modules|coverage|vendor)$',
     \ 'file': '\v\.(exe|so|dll)$',
     \ }
 
