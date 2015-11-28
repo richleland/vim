@@ -3,7 +3,7 @@ set nocompatible
 
 " bundle auto-loading
 filetype off
-source ~/.vim/bundles.vim
+source ~/.vim/plugs.vim
 filetype plugin indent on
 
 " 256 colors in terminal
@@ -181,7 +181,7 @@ map <c-n> :NERDTreeToggle<cr>
 let NERDTreeIgnore=['\~$', '.*\.pyc$', 'pip-log\.txt$']
 let NERDTreeShowBookmarks=1
 let NERDTreeQuitOnOpen=1
-let NERDTreeDirArrows=1
+"let NERDTreeDirArrows=1
 
 " ragtag
 let g:ragtag_global_maps = 1

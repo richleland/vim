@@ -6,4 +6,5 @@
 *~
 tmp
 bundle/*
+plugged/*
 !bundle/.gitkeep
