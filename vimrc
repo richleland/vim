@@ -138,7 +138,7 @@ nnoremap <leader>bs :!make html<cr>
 nnoremap <leader>r :read !curl -s --raw
 
 " invoke CtrlP
-nnoremap <leader>p :CtrlP<cr>
+nnoremap <leader>t :CtrlP<cr>
 
 if has("gui_running")
     colorscheme railscasts
@@ -177,16 +177,17 @@ let g:gist_detect_filetype = 1
 let g:gist_open_browser_after_post = 1
 
 " NERD Tree
-map <c-n> :NERDTreeToggle<cr>
+nmap <leader>, :NERDTreeToggle<cr>
 let NERDTreeIgnore=['\~$', '.*\.pyc$', 'pip-log\.txt$']
 let NERDTreeShowBookmarks=1
 let NERDTreeQuitOnOpen=1
-"let NERDTreeDirArrows=1
 
 " ragtag
 let g:ragtag_global_maps = 1
 
 " YouCompleteMe
+let g:ycm_key_list_select_completion=[]
+let g:ycm_key_list_previous_completion=[]
 let g:ycm_collect_identifiers_from_comments_and_strings = 1
 let g:ycm_filetype_blacklist = {
       \ 'less' : 1,
@@ -205,19 +206,16 @@ let g:ycm_filetype_blacklist = {
       \}
 
 " ultisnips
-let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsSnippetDirectories=['bundle/vim-snippets/UltiSnips', 'ultisnips']
 
 " tagbar
-nmap <leader>t :TagbarToggle<cr>
-let g:tagbar_autoclose = 1
-let g:tagbar_iconchars = ['▸', '▾']
+"nmap <leader>t :TagbarToggle<cr>
+"let g:tagbar_autoclose = 1
+"let g:tagbar_iconchars = ['▸', '▾']
 
 " YankRing.vim
 nnoremap <silent> <leader>y :YRShow<CR>
 let g:yankring_window_height = 10
-let g:yankring_replace_n_pkey = '<nul>'
-let g:yankring_replace_n_nkey = '<nul>'
 
 " powerline
 python from powerline.vim import setup as powerline_setup
@@ -232,6 +230,7 @@ let g:flake8_ignore="E501,W293,W404"
 let g:syntastic_javascript_checkers=['jshint']
 
 " CtrlP
+let g:ctrlp_map = '<nul>'
 let g:ctlrp_working_path_mode = 'ra'
 let g:ctrlp_custom_ignore = {
     \ 'dir':  '\v(\.git|\.hg|\.svn|node_modules|coverage|vendor)$',
