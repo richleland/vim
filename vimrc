@@ -8,7 +8,7 @@ filetype plugin indent on
 
 " 256 colors in terminal
 set t_Co=256
-colorscheme railscasts
+colorscheme onedark
 
 " security
 set modelines=0
@@ -141,7 +141,7 @@ nnoremap <leader>r :read !curl -s --raw
 nnoremap <leader>t :CtrlP<cr>
 
 if has("gui_running")
-    colorscheme railscasts
+    colorscheme onedark
     "set guifont=Inconsolata:h14
     set guifont=Inconsolata-dz\ for\ Powerline:h12
     " always hide the toolbar icons
