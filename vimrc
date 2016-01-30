@@ -178,7 +178,7 @@ let g:gist_open_browser_after_post = 1
 
 " NERD Tree
 nmap <leader>, :NERDTreeToggle<cr>
-let NERDTreeIgnore=['\~$', '.*\.pyc$', 'pip-log\.txt$']
+let NERDTreeIgnore=['\~$', '.*\.beam$', '.*\.pyc$', 'pip-log\.txt$']
 let NERDTreeShowBookmarks=1
 let NERDTreeQuitOnOpen=1
 
