@@ -161,8 +161,8 @@ end
 " PLUGINS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Ack
-map <leader>a :Ack
+" Ag
+map <leader>a :Ag 
 
 " easymotion
 let g:EasyMotion_leader_key = '<leader>m'
@@ -186,6 +186,7 @@ let NERDTreeQuitOnOpen=1
 let g:ragtag_global_maps = 1
 
 " YouCompleteMe
+"let g:ycm_path_to_python_interpreter = '/Users/rleland/.pyenv/shims/python'
 let g:ycm_key_list_select_completion=[]
 let g:ycm_key_list_previous_completion=[]
 let g:ycm_collect_identifiers_from_comments_and_strings = 1
@@ -223,11 +224,14 @@ python powerline_setup()
 python del powerline_setup
 let g:Powerline_symbols="compatible"
 
-" flake8
-let g:flake8_ignore="E501,W293,W404"
-
 " syntastic
-let g:syntastic_javascript_checkers=['jshint']
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_loc_list_height = 5
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+let g:syntastic_javascript_checkers=['eslint']
+let g:syntastic_html_checkers=[]
 
 " CtrlP
 let g:ctrlp_map = '<nul>'
@@ -264,6 +268,7 @@ autocmd FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4
 " php
 autocmd BufWritePre *.php :%s/\s\+$//e
 autocmd BufWritePre *.php :retab! 4
+autocmd FileType php setlocal tabstop=4 softtabstop=4 shiftwidth=4
 
 " html
 autocmd FileType html setlocal tabstop=2 softtabstop=2 shiftwidth=2
@@ -276,7 +281,7 @@ autocmd BufNewFile,BufRead *.sls setlocal filetype=yaml
 " javascript
 autocmd BufWritePre *.js :%s/\s\+$//e
 autocmd FileType javascript setlocal tabstop=2 softtabstop=2 shiftwidth=2
-autocmd BufNewFile,BufRead *.json setlocal filetype=javascript
+autocmd BufNewFile,BufRead *.json setlocal filetype=json
 autocmd BufNewFile,BufRead .jshintrc setlocal filetype=javascript
 autocmd BufNewFile,BufRead .csslintrc setlocal filetype=javascript
 autocmd BufNewFile,BufRead *.hbs setlocal filetype=handlebars
