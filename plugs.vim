@@ -1,6 +1,5 @@
 call plug#begin('~/.vim/plugged')
 
-"Plug 'Lokaltog/powerline', {'rtp': 'bindings/vim/'}
 Plug 'Glench/Vim-Jinja2-Syntax', { 'for': 'jinja' }
 Plug 'HerringtonDarkholme/yats.vim', { 'for': 'typescript' }
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
@@ -15,6 +14,7 @@ Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'scrooloose/syntastic'
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/YankRing.vim'
 Plug 'vim-scripts/bufkill.vim'
