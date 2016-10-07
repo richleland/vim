@@ -113,7 +113,7 @@ nnoremap <leader>3 yypVr-o<CR>
 nnoremap <leader>4 yypVr~o<CR>
 
 " Edit GTD file
-nmap <leader>g :e ~/Dropbox/GTD/today.txt<cr>
+nmap <leader>g :e ~/Dropbox\ (Personal)/GTD/today.txt<cr>
 
 " Edit ssh_config file
 nmap <leader>sc :e ~/config-files/ssh_config<cr>
