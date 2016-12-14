@@ -9,6 +9,7 @@ Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
 Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'joshdick/onedark.vim'
 Plug 'kien/ctrlp.vim'
+Plug 'mattn/emmet-vim'
 Plug 'nvie/vim-flake8', { 'for': 'python' }
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdcommenter'

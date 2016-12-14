@@ -241,6 +241,10 @@ let g:ctrlp_custom_ignore = {
     \ 'file': '\v\.(exe|so|dll)$',
     \ }
 
+" Emmet
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FILE TYPE SPECIFIC
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
