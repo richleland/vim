@@ -167,10 +167,6 @@ map <leader>a :Ag
 " easymotion
 let g:EasyMotion_leader_key = '<leader>m'
 
-" indent-guides
-"let g:indent_guides_enable_on_vim_startup = 0
-"let g:indent_guides_guide_size = 1
-
 " gist.vim
 let g:gist_clip_command = 'pbcopy'
 let g:gist_detect_filetype = 1
@@ -208,11 +204,6 @@ let g:ycm_filetype_blacklist = {
 
 " ultisnips
 let g:UltiSnipsSnippetDirectories=['bundle/vim-snippets/UltiSnips', 'ultisnips']
-
-" tagbar
-"nmap <leader>t :TagbarToggle<cr>
-"let g:tagbar_autoclose = 1
-"let g:tagbar_iconchars = ['▸', '▾']
 
 " YankRing.vim
 nnoremap <silent> <leader>y :YRShow<CR>
@@ -300,18 +291,3 @@ autocmd FileType rst setlocal noautoindent nocindent nosmartindent indentexpr=
 autocmd FileType markdown setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 
-" jinja
-"autocmd BufNewFile,BufRead *.jinja setlocal filetype=jinja
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" SUPREME LAZYNESS, aka AWESOMENESS
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Reload Google Chrome on Mac from Vim.
-" https://gist.github.com/2001993
-" Adapted from:  https://github.com/gcollazo/BrowserRefresh-Sublime/
-function! ChromeReload()
-    if has("gui_macvim")
-        :silent !osascript ~/.vim/reloadchrome.scpt > /dev/null 2>&1
-    endif
-endfunction
-nmap <leader>cr :call ChromeReload()<cr>
