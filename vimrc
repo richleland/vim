@@ -222,6 +222,7 @@ let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
 let g:syntastic_javascript_checkers=['eslint']
+let g:syntastic_python_checkers=['flake8']
 let g:syntastic_html_checkers=[]
 
 " CtrlP
@@ -256,7 +257,6 @@ autocmd FileType ruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
 " python
 autocmd BufWritePre *.py :%s/\s\+$//e
-autocmd BufWritePost *.py call Flake8()
 autocmd BufNewFile,BufRead *.wsgi setlocal filetype=python
 autocmd FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4
 
