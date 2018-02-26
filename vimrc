@@ -258,7 +258,7 @@ autocmd FileType ruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
 " python
 autocmd BufWritePre *.py :%s/\s\+$//e
 autocmd BufNewFile,BufRead *.wsgi setlocal filetype=python
-autocmd FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4
+autocmd FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4 colorcolumn=99
 
 " php
 autocmd BufWritePre *.php :%s/\s\+$//e
