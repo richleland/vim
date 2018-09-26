@@ -229,7 +229,7 @@ let g:syntastic_html_checkers=[]
 let g:ctrlp_map = '<nul>'
 let g:ctlrp_working_path_mode = 'ra'
 let g:ctrlp_custom_ignore = {
-    \ 'dir':  '\v(\.git|\.hg|\.svn|node_modules|coverage|vendor)$',
+    \ 'dir':  '\v(\.git|\.hg|\.svn|node_modules|coverage|vendor|venv|virtualenv)$',
     \ 'file': '\v\.(exe|so|dll)$',
     \ }
 
