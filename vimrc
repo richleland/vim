@@ -143,7 +143,7 @@ nnoremap <leader>t :CtrlP<cr>
 if has("gui_running")
     colorscheme onedark
     "set guifont=Inconsolata:h14
-    set guifont=Inconsolata-dz\ for\ Powerline:h12
+    set guifont=Inconsolata-dz\ for\ Powerline:h14
     " always hide the toolbar icons
     set guioptions-=T
     " always hide the scrollbars
