@@ -6,6 +6,7 @@ Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
 Plug 'airblade/vim-gitgutter'
 Plug 'briancollins/vim-jst'
+Plug 'craigemery/vim-autotag'
 Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
 Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'joshdick/onedark.vim'

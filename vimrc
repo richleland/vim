@@ -22,7 +22,7 @@ set expandtab
 " Backups
 set backupdir=~/.vim/tmp/backup//,/tmp
 set directory=~/.vim/tmp/swap//,/tmp
-set backup                        
+set backup
 if version >= 703
     set undodir=~/.vim/tmp/undo//,/tmp
     set undofile
@@ -62,6 +62,7 @@ set ruler
 set backspace=indent,eol,start
 set laststatus=2
 set statusline=%F\ %y\ [L%l/%L,C%c]\ (%p%%)\ %{fugitive#statusline()}
+set tags=./.tags,.tags;
 syntax enable
 
 " Soft/hard wrapping
@@ -162,7 +163,10 @@ end
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Ag
-map <leader>a :Ag 
+map <leader>a :Ag
+
+" autotag
+let g:autotagTagsFile = '.tags'
 
 " easymotion
 let g:EasyMotion_leader_key = '<leader>m'
