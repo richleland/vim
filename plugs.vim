@@ -5,11 +5,8 @@ Plug 'HerringtonDarkholme/yats.vim', { 'for': 'typescript' }
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
 Plug 'airblade/vim-gitgutter'
-Plug 'briancollins/vim-jst'
 Plug 'craigemery/vim-autotag'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
-Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'joshdick/onedark.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'mattn/emmet-vim'
@@ -18,6 +15,7 @@ Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'scrooloose/syntastic'
+Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/YankRing.vim'
