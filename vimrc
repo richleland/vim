@@ -2,13 +2,11 @@
 set nocompatible
 
 " bundle auto-loading
-filetype off
 source ~/.vim/plugs.vim
-filetype plugin indent on
 
-" 256 colors in terminal
+" colors
 set t_Co=256
-colorscheme onedark
+colorscheme gruvbox
 
 " security
 set modelines=0
@@ -18,6 +16,9 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
+
+" clipboard
+set clipboard=unnamedplus
 
 " Backups
 set backupdir=~/.vim/tmp/backup//,/tmp
@@ -61,8 +62,7 @@ set ttyfast
 set ruler
 set backspace=indent,eol,start
 set laststatus=2
-set statusline=%F\ %y\ [L%l/%L,C%c]\ (%p%%)\ %{fugitive#statusline()}
-set tags=./.tags,.tags;
+"set tags=./.tags,.tags;
 syntax enable
 
 " Soft/hard wrapping
@@ -77,9 +77,11 @@ endif
 " change the leader key
 let mapleader = ","
 
-" Buffers
+" Buffers and tabs
 nnoremap <leader>n :bnext<cr>
 nnoremap <leader>N :bprevious<cr>
+nnoremap <tab> :tabn<cr>
+nnoremap <s-tab> :tabp<cr>
 
 " Edit .vimrc
 nmap <leader>ev :e $MYVIMRC<cr>
@@ -96,8 +98,8 @@ set showmatch
 set hlsearch
 set gdefault
 map <leader><space> :noh<cr>
-nmap <tab> %
-vmap <tab> %
+"nmap <tab> %
+"vmap <tab> %
 
 " window helpers
 nnoremap <leader>w <C-w>v<C-w>l
@@ -142,9 +144,6 @@ nnoremap <leader>r :read !curl -s --raw
 nnoremap <leader>t :CtrlP<cr>
 
 if has("gui_running")
-    colorscheme onedark
-    "set guifont=Inconsolata:h14
-    set guifont=Inconsolata-dz\ for\ Powerline:h14
     " always hide the toolbar icons
     set guioptions-=T
     " always hide the scrollbars
@@ -153,93 +152,34 @@ if has("gui_running")
     set guioptions-=R
     set guioptions-=r
 
+
+    " reset the terminal clipboard setting
+    set clipboard=
+
+    set guifont=Menlo:h14
+    let g:gruvbox_italic=0
+
     if has("gui_macvim")
         macmenu &File.New\ Tab key=<nop>
     end
 end
 
+" start up startify, then NERDTree
+autocmd VimEnter *
+      \   if !argc()
+      \ |   Startify
+      \ |   NERDTree
+      \ |   wincmd w
+      \ | endif
+
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PLUGINS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+for config in split(glob('~/.vim/config/*.vim'), '\n')
+  execute 'source' config
+endfor
 
-" Ag
-map <leader>a :Ag
-
-" autotag
-let g:autotagTagsFile = '.tags'
-
-" easymotion
-let g:EasyMotion_leader_key = '<leader>m'
-
-" gist.vim
-let g:gist_clip_command = 'pbcopy'
-let g:gist_detect_filetype = 1
-let g:gist_open_browser_after_post = 1
-
-" NERD Tree
-nmap <leader>, :NERDTreeToggle<cr>
-let NERDTreeIgnore=['\~$', '.*\.beam$', '.*\.egg-info$', '.*\.pyc$', 'pip-log\.txt$', '__pycache__$']
-let NERDTreeShowBookmarks=1
-let NERDTreeQuitOnOpen=1
-
-" ragtag
-let g:ragtag_global_maps = 1
-
-" YouCompleteMe
-"let g:ycm_path_to_python_interpreter = '/Users/rleland/.pyenv/shims/python'
-let g:ycm_key_list_select_completion=[]
-let g:ycm_key_list_previous_completion=[]
-let g:ycm_collect_identifiers_from_comments_and_strings = 1
-let g:ycm_filetype_blacklist = {
-      \ 'less' : 1,
-      \ 'css' : 1,
-      \ 'html' : 1,
-      \ 'tagbar' : 1,
-      \ 'qf' : 1,
-      \ 'notes' : 1,
-      \ 'markdown' : 1,
-      \ 'unite' : 1,
-      \ 'text' : 1,
-      \ 'vimwiki' : 1,
-      \ 'pandoc' : 1,
-      \ 'infolog' : 1,
-      \ 'mail' : 1
-      \}
-
-" ultisnips
-let g:UltiSnipsSnippetDirectories=['bundle/vim-snippets/UltiSnips', 'ultisnips']
-
-" YankRing.vim
-nnoremap <silent> <leader>y :YRShow<CR>
-let g:yankring_window_height = 10
-
-" powerline
-python3 from powerline.vim import setup as powerline_setup
-python3 powerline_setup()
-python3 del powerline_setup
-let g:Powerline_symbols="compatible"
-
-" syntastic
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_loc_list_height = 5
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 1
-let g:syntastic_javascript_checkers=['eslint']
-let g:syntastic_python_checkers=['flake8']
-let g:syntastic_html_checkers=[]
-
-" CtrlP
-let g:ctrlp_map = '<nul>'
-let g:ctlrp_working_path_mode = 'ra'
-let g:ctrlp_custom_ignore = {
-    \ 'dir':  '\v(\.git|\.hg|\.svn|node_modules|coverage|vendor|venv|virtualenv)$',
-    \ 'file': '\v\.(exe|so|dll)$',
-    \ }
-
-" Emmet
-let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FILE TYPE SPECIFIC

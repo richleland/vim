@@ -1,26 +1,58 @@
-call plug#begin('~/.vim/plugged')
+"dein Scripts-----------------------------
+if &compatible
+  set nocompatible               " Be iMproved
+endif
 
-Plug 'Glench/Vim-Jinja2-Syntax', { 'for': 'jinja' }
-Plug 'HerringtonDarkholme/yats.vim', { 'for': 'typescript' }
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
-Plug 'airblade/vim-gitgutter'
-Plug 'craigemery/vim-autotag'
-Plug 'editorconfig/editorconfig-vim'
-Plug 'joshdick/onedark.vim'
-Plug 'kien/ctrlp.vim'
-Plug 'mattn/emmet-vim'
-Plug 'nvie/vim-flake8', { 'for': 'python' }
-Plug 'rking/ag.vim'
-Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'scrooloose/syntastic'
-Plug 'sheerun/vim-polyglot'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-surround'
-Plug 'vim-scripts/YankRing.vim'
-Plug 'vim-scripts/bufkill.vim'
+" Required:
+set runtimepath+=/Users/rleland/.cache/dein/repos/github.com/Shougo/dein.vim
+" Required:
+if dein#load_state('/Users/rleland/.cache/dein')
+  call dein#begin('/Users/rleland/.cache/dein')
 
-" Add plugins to &runtimepath
-call plug#end()
+  " Let dein manage dein
+  " Required:
+  call dein#add('/Users/rleland/.cache/dein/repos/github.com/Shougo/dein.vim')
+
+  " Add or remove your plugins here like this:
+  call dein#add('ctrlpvim/ctrlp.vim')
+  call dein#add('editorconfig/editorconfig-vim')
+  call dein#add('joshdick/onedark.vim')
+  call dein#add('ludovicchabant/vim-gutentags')
+  call dein#add('majutsushi/tagbar')
+  call dein#add('mhinz/vim-startify')
+  call dein#add('morhetz/gruvbox')
+  call dein#add('rking/ag.vim')
+  call dein#add('scrooloose/nerdcommenter')
+  call dein#add('scrooloose/nerdtree')
+  call dein#add('tpope/vim-fugitive')
+  call dein#add('tpope/vim-surround')
+  call dein#add('vim-airline/vim-airline')
+  call dein#add('vim-airline/vim-airline-themes')
+  "call dein#add('Shougo/neosnippet.vim')
+  "call dein#add('Shougo/neosnippet-snippets')
+
+  call dein#add('Shougo/deoplete.nvim')
+  if !has('nvim')
+    call dein#add('roxma/nvim-yarp')
+    call dein#add('roxma/vim-hug-neovim-rpc')
+  endif
+  let g:deoplete#enable_at_startup = 1
+
+  call map(dein#check_clean(), "delete(v:val, 'rf')")
+
+  " Required:
+  call dein#end()
+  call dein#save_state()
+endif
+
+" Required:
+filetype plugin indent on
+syntax enable
+
+" If you want to install not installed plugins on startup.
+"if dein#check_install()
+"  call dein#install()
+"endif
+
+"End dein Scripts-------------------------
 
