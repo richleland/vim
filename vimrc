@@ -197,6 +197,7 @@ autocmd BufNewFile,BufRead Cheffile setlocal filetype=ruby
 autocmd BufNewFile,BufRead Gemfile setlocal filetype=ruby
 autocmd BufNewFile,BufRead Puppetfile setlocal filetype=ruby
 autocmd BufNewFile,BufRead Vagrantfile setlocal filetype=ruby
+autocmd BufNewFile,BufRead *.cap setlocal filetype=ruby
 autocmd FileType ruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
 " python
