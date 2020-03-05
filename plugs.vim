@@ -28,6 +28,7 @@ if dein#load_state('/Users/rleland/.cache/dein')
   call dein#add('tpope/vim-surround')
   call dein#add('vim-airline/vim-airline')
   call dein#add('vim-airline/vim-airline-themes')
+  call dein#add('wsdjeg/dein-ui.vim')
   "call dein#add('Shougo/neosnippet.vim')
   "call dein#add('Shougo/neosnippet-snippets')
 
